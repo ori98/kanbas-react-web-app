@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Edit</title>
+</head>
+
+<body>
+    <table>
+        <!-- First Column: Kanbas Navigation -->
+        <td valign="top">
+            <!-- Course Navigation -->
+            <ul>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Studio</a></li>
+                <li><a href="#">Commons</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </td>
+
+        <!-- Second Column: Course Navigation -->
+        <td valign="top">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li><a href="#">Assignments</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Rubrics</a></li>
+                <li><a href="#">Outcomes</li></a></li>
+                <li><a href="#">Collaborations</li></a></li>
+                <li><a href="#">Syllabus</li></a></li>
+                <li><a href="settings.html">Settings</li></a></li>
+            </ul>
+        </td>
+
+        <!-- Third Column: Assignments -->
+        <td valign="top">
+            <select id="edit-dropdown">
+                <option value="Edit">Edit</option>
+                <option selected value="speed-grader">Speed Grader</option>
+                <option value="duplicate">Duplicate</option>
+                <option value="delete">Delete</option>
+                <option value="move-to">Move To...</option>
+                <option value="edit">Copy To...</option>
+                <option value="edit">Share To Commons</option>
+            </select>
+
+            <hr>
+
+            <form id="edit-form">
+                <h2>Assignment Name</h2>
+
+                <input id="assignment-name" type="text" value="A1 - ENV + HTML">
+
+                <br><br>
+                <textarea id="textarea-desc">This is the assignment description</textarea>
+
+                <br><br> 
+                <label for="text-field-points">Points</label>
+                <br>
+                <input id="text-field-points" value="100">
+                <br><br>
+                <label for="drop-down-group">Assignment Group</label>
+                <br>
+                <select id="select-assignment-group">
+                    <option selected value="ASSIGNMENTS">ASSIGNMENTS</option>
+                    <option value="QUIZZES">QUIZZES</option>
+                </select>
+                <br><br>
+                <label for="drop-down-group">Assignment Group</label>
+                <br>
+                <select id="select-assignment-group">
+                    <option selected value="PERCENTAGE">PERCENTAGE</option>
+                    <option value="GPA">GPA</option>
+                </select>
+                <br><br>
+                <label for="select-submission-type">Submission Type</label>
+                <br>
+                <select id="select-submission-type">
+                    <option selected value="ONLINE">ONLINE</option>
+                    <option value="OFFLINE">OFFLINE</option>
+                </select>
+                <br><br>
+                <label>Online Entry Options</label>
+                <br>
+                <input type="checkbox" id="chk-text-entry" name="entry-options" value="text-entry" >Text Entry <br>
+                <input type="checkbox" id="chk-website-url" name="entry-options" value="website-url" >Website URL <br>
+                <input type="checkbox" id="chk-media-recordings" name="entry-options" value="media-recordings" >Media Recordings <br> 
+                <input type="checkbox" id="chk-file-upload" name="entry-options" value="file-upload" >File Upload <br>
+                <br>
+                <label>Submissions Attempts</label>
+                <br>
+                <select id="select-submission-attempts">
+                    <option selected value="Unlimited">Unlimited</option>
+                    <option value="Fixed">Fixed</option>
+                </select>
+                <br><br>
+                <label>Plagiarism Review</label>
+                <br>
+                <select id="select-plag-review">
+                    <option selected value="None">None</option>
+                    <option value="Detected">Detected</option>
+                </select>
+                <br><br>
+                <label>Group Assignment</label>
+                <br>
+                <input type="checkbox" id="chk-group" name="group-assignment" value="group">This is a group assignment
+                <br><br>
+                <label>Peer Reviews</label>
+                <br>
+                <input type="checkbox" id="chk-peer-review" name="peer-review" value="peer-review">Require Peer Reviews
+                <br><br>
+                <label>Assign</label>
+                <br>
+                <label>Assign to</label>
+                <br>
+                <input type="text" id="field-assigned-to" value="Everyone">
+                <br><br>
+                <label>Due</label>
+                <br>
+                <input id="field-due-date" type="date">
+                <br><br>
+                <label>Available from</label>
+                <br>
+                <input id="field-due-date" type="date"> 
+                <br><br>
+                <label>Until</label>
+                <br>
+                <input id="field-due-date" type="date">
+            </form>
+            <br>
+            <button type="button" value="cancel">Cancel</button>
+            <button type="submit" value="save">Save</button>
+        </td>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades</title>
+</head>
+<body>
+    <table>
+        <!-- First Column: Kanbas Navigation -->
+        <td valign="top">
+            <!-- Course Navigation -->
+            <ul>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Studio</a></li>
+                <li><a href="#">Commons</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </td>
+
+        <!-- Second Column: Course Navigation -->
+        <td valign="top">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li><a href="#">Assignments</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Rubrics</a></li>
+                <li><a href="#">Outcomes</li></a></li>
+                <li><a href="#">Collaborations</li></a></li>
+                <li><a href="#">Syllabus</li></a></li>
+                <li><a href="assignments/settings.html">Settings</li></a></li>
+            </ul>
+        </td>
+
+        <!-- Third Column: Grades-->
+        <td valign="top">
+            <select id="select-gradebook">
+                <option value="gradebook" selected>Gradebook</option>
+                <option value="details">Details</option>
+             </select>
+
+             <button type="button">Import</button>
+
+             <select id="select-export-import">
+                <option value="export" selected>Export</option>
+                <option value="import">Import</option>
+             </select>
+
+             <button type="button">Configure</button>
+
+             <br>
+             <form id="student-form">
+                <h2>Student Names</h2>
+                <input type="text" id="student-names" placeholder="Search Students">
+
+                <h2>Assignmet Names</h2>
+                <input type="text" id="assignment-names" placeholder="Search Assignments">
+             </form>
+             
+             <br>
+             <button type="button">Apply Filters</button>
+             <br>
+             <br>
+             <table border="1">
+                <tr>
+                    <th style="font-weight: bold;">Student Name</th>
+                    <th style="font-weight: bold;">A1 SETUP Out of 100</th>
+                    <th style="font-weight: bold;">A2 HTML Out of 100</th>
+                    <th style="font-weight: bold;">A3 CSS Out of 100</th>
+                    <th style="font-weight: bold;">A4 BootStrap Out of 100</th>
+                </tr>
+                <tr>
+                    <td>Raj Kumar</td>
+                    <td>85</td>
+                    <td>92</td>
+                    <td>78</td>
+                    <td>88</td>
+                </tr>
+                <tr>
+                    <td>Priya Patel</td>
+                    <td>90</td>
+                    <td>88</td>
+                    <td>95</td>
+                    <td>75</td>
+                </tr>
+                <tr>
+                    <td>Sanjay Singh</td>
+                    <td>75</td>
+                    <td>85</td>
+                    <td>80</td>
+                    <td>92</td>
+                </tr>
+                <tr>
+                    <td>Neha Sharma</td>
+                    <td>88</td>
+                    <td>78</td>
+                    <td>92</td>
+                    <td>85</td>
+                </tr>
+                <tr>
+                    <td>Mohit Verma</td>
+                    <td>92</td>
+                    <td>90</td>
+                    <td>85</td>
+                    <td>80</td>
+                </tr>
+            </table>
+
+        </td>
+            </table> 
+</body>
+</html>
