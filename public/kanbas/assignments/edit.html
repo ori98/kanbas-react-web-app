@@ -13,9 +13,9 @@
         <td valign="top">
             <!-- Course Navigation -->
             <ul>
-                <li><a href="#">Account</a></li>
+                <li><a href="../profile/index.html">Account</a></li>
                 <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Courses</a></li>
+                <li><a href="../home.html">Courses</a></li>
                 <li><a href="#">Calendar</a></li>
                 <li><a href="#">Inbox</a></li>
                 <li><a href="#">History</a></li>
@@ -28,13 +28,13 @@
         <!-- Second Column: Course Navigation -->
         <td valign="top">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="../home.html">Home</a></li>
                 <li><a href="#">Modules</a></li>
                 <li><a href="#">Piazza</a></li>
-                <li><a href="#">Home</a></li>
                 <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="#">Assignments</a></li>
+                <li><a href="../assignments/index.html">Assignments</a></li>
                 <li><a href="#">Quizzes</a></li>
+                <li><a href="grades.html">Grades</a></li>
                 <li><a href="#">People</a></li>
                 <li><a href="#">Panopto Video</a></li>
                 <li><a href="#">Discussions</a></li>
@@ -71,7 +71,7 @@
                 <br><br>
                 <textarea id="textarea-desc">This is the assignment description</textarea>
 
-                <br><br> 
+                <br><br>
                 <label for="text-field-points">Points</label>
                 <br>
                 <input id="text-field-points" value="100">
@@ -99,10 +99,11 @@
                 <br><br>
                 <label>Online Entry Options</label>
                 <br>
-                <input type="checkbox" id="chk-text-entry" name="entry-options" value="text-entry" >Text Entry <br>
-                <input type="checkbox" id="chk-website-url" name="entry-options" value="website-url" >Website URL <br>
-                <input type="checkbox" id="chk-media-recordings" name="entry-options" value="media-recordings" >Media Recordings <br> 
-                <input type="checkbox" id="chk-file-upload" name="entry-options" value="file-upload" >File Upload <br>
+                <input type="checkbox" id="chk-text-entry" name="entry-options" value="text-entry">Text Entry <br>
+                <input type="checkbox" id="chk-website-url" name="entry-options" value="website-url">Website URL <br>
+                <input type="checkbox" id="chk-media-recordings" name="entry-options" value="media-recordings">Media
+                Recordings <br>
+                <input type="checkbox" id="chk-file-upload" name="entry-options" value="file-upload">File Upload <br>
                 <br>
                 <label>Submissions Attempts</label>
                 <br>
@@ -138,15 +139,17 @@
                 <br><br>
                 <label>Available from</label>
                 <br>
-                <input id="field-due-date" type="date"> 
+                <input id="field-due-date" type="date">
                 <br><br>
                 <label>Until</label>
                 <br>
                 <input id="field-due-date" type="date">
             </form>
             <br>
-            <button type="button" value="cancel">Cancel</button>
-            <button type="submit" value="save">Save</button>
+            <a href="../assignments/index.html">
+                <button type="button" value="cancel">Cancel</button>
+                <button type="submit" value="save">Save</button>
+            </a>
         </td>
     </table>
 </body>
