@@ -1,137 +1,645 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assignments/styles/profile/index.css">
+    <style>
+        .black-navbar {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.modules-text {
+    text-align: center;
+}
+
+
+.icon {
+    font-size: 24px;
+}
+
+.custom-navbar {
+    position: fixed !important;
+    background-color: black;
+    width: 80px;
+    height: 100%;
+}
+
+.custom-nav-link:hover {
+    background-color: white !important;
+    color: red !important;
+}
+
+.custom-nav-link {
+    color: white !important;
+}
+
+.custom-nav-item {
+    margin: 0;
+}
+
+.custom-nav-link {
+    padding: 8px;
+    font-size: 12px;
+    color: white;
+    display: block;
+    text-align: center;
+}
+
+.custom-nav-link-active {
+    background-color: white !important;
+    color: red !important;
+}
+
+.custom-icon {
+    text-align: center;
+    font-size: 30px;
+    color: red;
+}
+
+.custom-logo {
+    height: 5rem;
+    width: 5rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.custom-active {
+    background-color: white;
+    color: red;
+}
+
+.custom-fa-solid {
+    align-items: center;
+}
+    </style>
     <title>Assignments</title>
+
+    <style>
+        body,
+        input::placeholder {
+            font-size: 20px;
+        }
+
+        .rounded-div {
+            font-size: 14px;
+            border: 2px solid black;
+            border-radius: 40rem;
+        }
+
+
+        input {
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+        }
+
+        .assignment-content a {
+            color: black;
+        }
+
+        .assignment-content {
+            border-left: solid thick green;
+        }
+
+        .assignments-top-section i {
+            color: black;
+            font-size: 15px;
+        }
+
+        .fa-circle-check {
+            color: #8fbc8f;
+            margin-right: 25px;
+        }
+
+        .assignment-content .fa-file-lines {
+            color: green;
+            color: #93C3A6;
+            margin-left: 20px;
+        }
+
+        .assignment-content .list-group-item {
+            border-bottom: 0.2px solid gray;
+            border-right: 0.2px solid gray;
+        }
+    </style>
+
 </head>
+
 <body>
-    <table>
-        <!-- First Column: Kanbas Navigation -->
-        <td valign="top">
-            <!-- Course Navigation -->
-            <ul>
-                <li><a href="../profile/index.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="../home.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </td>
+    <div class="fluid-container">
+        <div class="row">
+            <div class="col-1">
+                <nav class="navbar navbar-expand-lg custom-navbar">
 
-        <!-- Second Column: Course Navigation -->
-        <td valign="top">
-            <ul>
-                <li><a href="../home.html">Home</a></li>
-                <li><a href="#">Modules</a></li>
-                <li><a href="#">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="../assignments/index.html">Assignments</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="../grades.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Panopto Video</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Rubrics</a></li>
-                <li><a href="#">Outcomes</li></a></li>
-                <li><a href="#">Collaborations</li></a></li>
-                <li><a href="#">Syllabus</li></a></li>
-                <li><a href="settings.html">Settings</li></a></li>
-            </ul>
-        </td>
-
-        <!-- Third Column: Assignments -->
-        <td valign="top">
-            <input type="text" id="search-assignment" placeholder="Search for Assignments">
-            <button type="button">Group</button>
-            <button type="button">Assignment</button>
-            <select id="edit-dates">
-                <option value="edit-assignment-dates">Edit Assignment Dates</option>
-                <option value="edit-quiz-dates">Edit Quiz Dates</option>
-            </select>
-            <hr>
-            <h2>ASSIGNMENTS 40% of Total
-
-            <select id="edit-dropdown">
-                <option value="Edit">Edit</option>
-                <option value="speed-grader">Speed Grader</option>
-                <option value="duplicate">Duplicate</option>
-                <option value="delete">Delete</option>
-                <option value="move-to">Move To...</option>
-                <option value="edit">Copy To...</option>
-                <option value="edit">Share To Commons</option>
-            </select>
-            </h2>
-
-            <ul>
-                <li><a href="edit.html"> A1 - ENV + HTML <br> Multiple Modules</a> | Not available yet</li>
-                <li><a href="edit.html"> A2 - CSS + BOOTSTRAP<br> Multiple Modules</a> | Not available yet</li>
-                <li><a href="edit.html"> A3 - JS + REACT<br> Multiple Modules</a> | Not available yet</li>
-                <li><a href="edit.html"> A4 - STATE+ REDUX <br> Multiple Modules</a> | Not available yet</li>
-                <li><a href="edit.html"> A5 - NODE + SESSION <br> Multiple Modules</a> | Not available yet</li>
-                <li><a href="edit.html"> A6 - MONGO + MONGOOSE<br> Multiple Modules</a> | Not available yet</li>
-            </ul>
-
-            <h2>QUIZZES 10% of Total
-            <select id="edit-dropdown">
-                <option value="Edit">Edit</option>
-                <option value="speed-grader">Speed Grader</option>
-                <option value="duplicate">Duplicate</option>
-                <option value="delete">Delete</option>
-                <option value="move-to">Move To...</option>
-                <option value="edit">Copy To...</option>
-                <option value="edit">Share To Commons</option>
-            </select>
-            </h2>
-
-            <ul>
-                <li><a href="edit.html"> Q1 - HTML <br> Multiple Modules</a> | Not available yet</li>
-                <li><a href="edit.html"> Q2 - CSS <br> Multiple Modules</a> | Not available yet</li>
-                <li><a href="edit.html"> Q3 - JS, ES6 <br> Multiple Modules</a> | Not available yet</li>
-                <li><a href="edit.html"> Q4 - STATE<br> Multiple Modules</a> | Not available yet</li>
-                <li><a href="edit.html"> Q5 - NODE <br> Multiple Modules</a> | Not available yet</li>
-            </ul>
-
-            <h2>EXAMS 20% of Total
-                <select id="edit-dropdown">
-                    <option value="Edit">Edit</option>
-                    <option value="speed-grader">Speed Grader</option>
-                    <option value="duplicate">Duplicate</option>
-                    <option value="delete">Delete</option>
-                    <option value="move-to">Move To...</option>
-                    <option value="edit">Copy To...</option>
-                    <option value="edit">Share To Commons</option>
-                </select>
-                </h2>
-    
-                <ul>
-                    <li><a href="edit.html"> Midterm<br> Multiple Modules</a> | Not available yet</li>
-                    <li><a href="edit.html"> Final<br> Multiple Modules</a> | Not available yet</li>
-                </ul>
-
-                <h2>PROJECT 30% of Total
-                    <select id="edit-dropdown">
-                        <option value="Edit">Edit</option>
-                        <option value="speed-grader">Speed Grader</option>
-                        <option value="duplicate">Duplicate</option>
-                        <option value="delete">Delete</option>
-                        <option value="move-to">Move To...</option>
-                        <option value="edit">Copy To...</option>
-                        <option value="edit">Share To Commons</option>
-                    </select>
-                    </h2>
-        
-                    <ul>
-                        <li><a href="edit.html"> Project<br> Multiple Modules</a> | Not available yet</li>
+                    <ul class="navbar-nav flex-column">
+                        <li class="nav-item custom-nav-item">
+                            <img class="custom-logo" src="../assignments/northeastern-logo-nobg.png"">
+                            </li>
+                            <li class=" nav-item custom-nav-item">
+                            <div class="white-selected">
+                                <a href="../profile/index.html" class="nav-link custom-nav-link">
+                                    <i class="fa-solid fa-user custom-icon" style="color: grey;"></i>
+                                    <br />
+                                    <span>Account</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item custom-nav-item">
+                            <a href="../dashboard/index.html" class="nav-link custom-nav-link">
+                                <i class="fa-solid fa-gauge custom-icon"></i>
+                                <br />
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item custom-nav-item">
+                            <a href="../home.html" class="nav-link custom-nav-link custom-nav-link-active">
+                                <i class="fa-solid fa-book custom-icon"></i>
+                                <br />
+                                <span>Courses</span>
+                            </a>
+                        </li>
+                        <li class="nav-item custom-nav-item">
+                            <a href="#" class="nav-link custom-nav-link">
+                                <i class="fa-regular fa-calendar-days custom-icon"></i>
+                                <br />
+                                <span>Calendar</span>
+                            </a>
+                        </li>
+                        <li class="nav-item custom-nav-item">
+                            <a href="#" class="nav-link custom-nav-link">
+                                <i class="fa-solid fa-inbox custom-icon"></i>
+                                <br />
+                                <span>Inbox</span>
+                            </a>
+                        </li>
+                        <li class="nav-item custom-nav-item">
+                            <a href="#" class="nav-link custom-nav-link">
+                                <i class="fa-solid fa-clock custom-icon"></i>
+                                <br />
+                                <span>History</span>
+                            </a>
+                        </li>
+                        <li class="nav-item custom-nav-item">
+                            <a href="#" class="nav-link custom-nav-link">
+                                <i class="fa-solid fa-network-wired custom-icon"></i>
+                                <br />
+                                <span>Studio</span>
+                            </a>
+                        </li>
+                        <li class="nav-item custom-nav-item">
+                            <a href="#" class="nav-link custom-nav-link">
+                                <i class="fa fa-sign-out custom-icon" aria-hidden="true"></i> <br />
+                                <span>Commons</span>
+                            </a>
+                        </li>
+                        <li class="nav-item custom-nav-item">
+                            <a href="#" class="nav-link custom-nav-link">
+                                <i class="fa-solid fa-question custom-icon"></i>
+                                <br />
+                                <span>Help</span>
+                            </a>
+                        </li>
                     </ul>
-        </td>
-            </table> 
+                    <!-- </div> -->
+                </nav>
+            </div>
+            <div class="row col-10">
+                <div class="d-flex justify-content-between align-items-center my-2">
+                    <nav style="--bs-breadcrumb-divider: '>'; display: inline" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <i class="fa-solid fa-bars mx-3 mt-1" style="color: red"></i>
+                            <li class="breadcrumb-item"><a href="#">CS5610.11744.202310</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+                        </ol>
+                    </nav>
+                    <div class="student-view float-end">
+                        <button class="btn btn-gray"><i class="fa-solid fa-glasses mx-2"></i>Student View</button>
+                    </div>
+                </div>
+                <hr>
+                <div class="col-3">
+                    <ul class="list-group no-border">
+                        <li class="list-group-item"><a href="../home.html">Home</a></li>
+                        <li class="list-group-item"><a href="#">Modules</a></li>
+                        <li class="list-group-item"><a href="#">Piazza</a></li>
+                        <li class="list-group-item"><a href="#">Zoom Meetings</a></li>
+                        <li class="list-group-item active-item"><a href="../assignments/index.html">Assignments</a></li>
+                        <li class="list-group-item"><a href="#">Quizzes</a></li>
+                        <li class="list-group-item"><a href="../grades.html">Grades</a></li>
+                        <li class="list-group-item"><a href="#">People</a></li>
+                        <li class="list-group-item"><a href="#">Panopto Video</a></li>
+                        <li class="list-group-item"><a href="#">Discussions<i class="fa-regular fa-eye-slash"></i></a>
+                        </li>
+                        <li class="list-group-item"><a href="#">Announcements<i class="fa-regular fa-eye-slash"></i></a>
+                        </li>
+                        <li class="list-group-item"><a href="#">Pages<i class="fa-regular fa-eye-slash"></i></a></li>
+                        <li class="list-group-item"><a href="#">Files<i class="fa-regular fa-eye-slash"></i></a></li>
+                        <li class="list-group-item"><a href="#">Rubrics<i class="fa-regular fa-eye-slash"></i></a></li>
+                        <li class="list-group-item"><a href="#">Outcomes<i class="fa-regular fa-eye-slash"></i></a></li>
+                        <li class="list-group-item"><a href="#">Collaborations<i
+                                    class="fa-regular fa-eye-slash"></i></a></li>
+                        <li class="list-group-item"><a href="#">Syllabus<i class="fa-regular fa-eye-slash"></i></a></li>
+                        <li class="list-group-item"><a href="#">Progress Reports (EAB Navigate)</a></li>
+                        <li class="list-group-item"><a href="./settings.html">Settings</a></li>
+                    </ul>
+                </div>
+                <div class="col-9 ">
+                    <div>
+                        <input type="text" class="w-25" placeholder="Search for Assignment">
+                        <div class="float-end">
+                            <div class="btn btn-light">+ Group</div>
+                            <div class="btn btn-danger" style="background-color: red;">+ Assignment</div>
+                            <div class="btn btn-light"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="my-4">
+                        <div class="p-4" style="background-color: #F2F3F4">
+                            <div style="display: inline">
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-ellipsis-v"
+                                    aria-hidden="true"></i>
+                                <span class="mx-2">&#9660;</span>
+                                <span><b>Assignments</b></span>
+                            </div>
+                            <div class="mb-1 assignments-top-section float-end">
+                                <btn class="btn btn-light rounded-div" style="border: 2px grey solid">40% of Total</btn>
+                                <i class="mx-1 fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-ellipsis-vertical mx-3"></i>
+                            </div>
+                        </div>
+                        <div class="assignment-content">
+                            <ul class="list-group">
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-2 mt-4">
+                                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i
+                                                class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                            <i class="ml-1 fa-solid fa-file-lines"></i>
+                                        </div>
+                                        <div class="col-8 course-content">
+                                            <a href="./edit.html">
+                                                <b>A1 SETUP</b>
+                                                <p class="text-muted">
+                                                    Week 1 - Setup: Week starting (18/09/2023) | <br>
+                                                    <strong>Due</strong> Sep 18, 23 at 11:59pm | 100 pts
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <div class="col-2 mt-4">
+                                            <i class="fa-solid fa-circle-check"></i><i
+                                                class="fa-solid fa-ellipsis-vertical"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-2 mt-4">
+                                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i
+                                                class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                            <i class="ml-1 fa-solid fa-file-lines"></i>
+                                        </div>
+                                        <div class="col-8 course-content">
+                                            <a href="./edit.html">
+                                                <b>A2 HTML</b>
+                                                <p class="text-muted">
+                                                    Week 2 - Html: Week starting (25/09/2023) | <br>
+                                                    <strong>Due</strong> Sep 25, 23 at 11:59pm | 100 pts
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <div class="col-2 mt-4">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-2 mt-4">
+                                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i
+                                                class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                            <i class="ml-1 fa-solid fa-file-lines"></i>
+                                        </div>
+                                        <div class="col-8 course-content">
+                                            <a href="./edit.html">
+                                                <b>A3 CSS</b>
+                                                <p class="text-muted">
+                                                    Week 3 - CSS: Week starting (02/10/2023) | <br>
+                                                    <strong>Due</strong> Oct 10, 23 at 11:59pm | 100 pts
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <div class="col-2 mt-4">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-2 mt-4">
+                                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i
+                                                class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                            <i class="ml-1 fa-solid fa-file-lines"></i>
+                                        </div>
+                                        <div class="col-8 course-content">
+                                            <a href="./edit.html">
+                                                <b>A4 BOOTSTRAP</b>
+                                                <p class="text-muted">
+                                                    Week 4 - Bootstrap: Week starting (09/10/2023) | <br>
+                                                    <strong>Due</strong> Oct 09, 23 at 11:59pm | 100 pts
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <div class="col-2 mt-4">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-2 mt-4">
+                                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i
+                                                class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                            <i class="ml-1 fa-solid fa-file-lines"></i>
+                                        </div>
+                                        <div class="col-8 course-content">
+                                            <a href="./edit.html">
+                                                <b>A5 JAVASCRIPT</b>
+                                                <p class="text-muted">
+                                                    Week 5 - Javascript: Week starting (16/10/2023) | <br>
+                                                    <strong>Due</strong> Oct 16, 23 at 11:59pm | 100 pts
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <div class="col-2 mt-4">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-2 mt-4">
+                                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i
+                                                class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                            <i class="ml-1 fa-solid fa-file-lines"></i>
+                                        </div>
+                                        <div class="col-8 course-content">
+                                            <a href="./edit.html">
+                                                <b>A6 REACT</b>
+                                                <p class="text-muted">
+                                                    Week 6 - React: Week starting (23/10/2023) | <br>
+                                                    <strong>Due</strong> Oct 23, 23 at 11:59pm | 100 pts
+                                                </p>
+                                            </a>
+                                        </div>
+                                        <div class="col-2 mt-4">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="my-4">
+                        <div class="p-4" style="background-color: #F2F3F4">
+                            <div style="display: inline">
+                                <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i class="fa fa-ellipsis-v"
+                                    aria-hidden="true"></i>
+                                <span class="mx-2">&#9660;</span>
+                                <span><b>Quizzes</b></span>
+                            </div>
+                            <div class="mb-1 assignments-top-section float-end">
+                                <btn class="btn btn-light rounded-div">10% of Total</btn>
+                                <i class="mx-1 fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-ellipsis-vertical mx-3"></i>
+                            </div>
+                        </div>
+                        <div class="assignment-content">
+                            <ul class="list-group">
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-2 mt-4">
+                                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i
+                                                class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                            <i class="ml-1 fa-solid fa-file-lines"></i>
+                                        </div>
+                                        <div class="col-8 course-content">
+                                            <b>Q1 HTML</b>
+                                            <p class="text-muted">
+                                                Week 2 - Html: Week starting (25/09/2023) | <br>
+                                                <strong>Due</strong> Sep 25, 23 at 11:59pm | 100 pts
+                                            </p>
+                                        </div>
+                                        <div class="col-2 mt-4">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-2 mt-4">
+                                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i
+                                                class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                            <i class="ml-1 fa-solid fa-file-lines"></i>
+                                        </div>
+                                        <div class="col-8 course-content">
+                                            <b>Q2 CSS</b>
+                                            <p class="text-muted">
+                                                Week 3 - CSS: Week starting (02/10/2023) | <br>
+                                                <strong>Due</strong> Oct 10, 23 at 11:59pm | 100 pts
+                                            </p>
+                                        </div>
+                                        <div class="col-2 mt-4">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-2 mt-4">
+                                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i
+                                                class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                            <i class="ml-1 fa-solid fa-file-lines"></i>
+                                        </div>
+                                        <div class="col-8 course-content">
+                                            <b>Q3 JS, ES6</b>
+                                            <p class="text-muted">
+                                                Week 4 - Bootstrap: Week starting (09/10/2023) | <br>
+                                                <strong>Due</strong> Oct 09, 23 at 11:59pm | 100 pts
+                                            </p>
+                                        </div>
+                                        <div class="col-2 mt-4">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-2 mt-4">
+                                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i
+                                                class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                            <i class="ml-1 fa-solid fa-file-lines"></i>
+                                        </div>
+                                        <div class="col-8 course-content">
+                                            <b>Q4 NODE</b>
+                                            <p class="text-muted">
+                                                Week 5 - Javascript: Week starting (16/10/2023) | <br>
+                                                <strong>Due</strong> Oct 16, 23 at 11:59pm | 100 pts
+                                            </p>
+                                        </div>
+                                        <div class="col-2 mt-4">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-2 mt-4">
+                                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i
+                                                class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                            <i class="ml-1 fa-solid fa-file-lines"></i>
+                                        </div>
+                                        <div class="col-8 course-content">
+                                            <b>Q5 MONGO</b>
+                                            <p class="text-muted">
+                                                Week 6 - React: Week starting (23/10/2023) | <br>
+                                                <strong>Due</strong> Oct 23, 23 at 11:59pm | 100 pts
+                                            </p>
+                                        </div>
+                                        <div class="col-2 mt-4">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="my-4">
+                        <div class="p-4" style="background-color: #F2F3F4">
+                            <div style="display: inline">
+                                <i class="fa-solid fa-ellipsis-vertical"></i><i class="fa-solid fa-ellipsis-vertical"></i>
+                                <span class="mx-2">&#9660;</span>
+                                <span><b>Exams</b></span>
+                            </div>
+                            <div class="mb-1 assignments-top-section float-end">
+                                <btn class="btn btn-light rounded-div">20% of Total</btn>
+                                <i class="mx-1 fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-ellipsis-vertical mx-3"></i>
+                            </div>
+                        </div>
+                        <div class="assignment-content">
+                            <ul class="list-group">
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-2 mt-4">
+                                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i
+                                                class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                            <i class="ml-1 fa-solid fa-file-lines"></i>
+                                        </div>
+                                        <div class="col-8 course-content">
+                                            <b>MIDTERM</b>
+                                            <p class="text-muted">
+                                                Week 2 - Midterm: Week starting (25/09/2023) | <br>
+                                                <strong>Due</strong> Sep 25, 23 at 11:59pm | 100 pts
+                                            </p>
+                                        </div>
+                                        <div class="col-2 mt-4">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-2 mt-4">
+                                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i
+                                                class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                            <i class="ml-1 fa-solid fa-file-lines"></i>
+                                        </div>
+                                        <div class="col-8 course-content">
+                                            <b>FINAL</b>
+                                            <p class="text-muted">
+                                                Week 5 - Final: Week starting (16/10/2023) | <br>
+                                                <strong>Due</strong> Oct 16, 23 at 11:59pm | 100 pts
+                                            </p>
+                                        </div>
+                                        <div class="col-2 mt-4">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="my-4">
+                        <div class="p-4" style="background-color: #F2F3F4">
+                            <div style="display: inline">
+                                <i class="fa-solid fa-ellipsis-vertical"></i><i class="fa-solid fa-ellipsis-vertical"></i>
+                                <span class="mx-2">&#9660;</span>
+                                <span><b>Project</b></span>
+                            </div>
+                            <div class="mb-1 assignments-top-section float-end">
+                                <btn class="btn btn-light rounded-div">30% of Total</btn>
+                                <i class="mx-1 fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-ellipsis-vertical mx-3"></i>
+                            </div>
+                        </div>
+                        <div class="assignment-content">
+                            <ul class="list-group">
+                                <div class="list-group-item">
+                                    <div class="row">
+                                        <div class="col-2 mt-4">
+                                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i><i
+                                                class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                                            <i class="ml-1 fa-solid fa-file-lines"></i>
+                                        </div>
+                                        <div class="col-8 course-content">
+                                            <b>Project</b>
+                                            <p class="text-muted">
+                                                Week 6 - Project: Week starting (23/10/2023) | <br>
+                                                <strong>Due</strong> Oct 23, 23 at 11:59pm | 100 pts
+                                            </p>
+                                        </div>
+                                        <div class="col-2 mt-4">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

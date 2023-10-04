@@ -1,95 +1,182 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assignments/styles/profile/index.css">
+    <link rel="stylesheet" href="../home.css">
     <title>Edit Profile</title>
+
 </head>
+
 <body>
-    <table>
-        <!-- First Column: Kanbas Navigation -->
-        <td valign="top">
-            <!-- Course Navigation -->
-            <ul>
-                <li><a href="../profile/index.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="../home.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </td>
+    <div class="fluid-container">
+        <div class="row">
+            <div class="col-1">
+                <nav class="navbar navbar-expand-lg custom-navbar">
 
-        <!-- Second Column: Profile Navigation -->
-        <td valign="top">
-            <ul>
-                <li><a href="#">Notification</a></li>
-                <li><a href="../profile/index.html">Profile</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="../assignments/settings.html">Settings</a></li>
-                <li><a href="#">ePortfolios</a></li>
-                <li><a href="#">Shared Content</a></li>
-                <li><a href="#">The Hub</a></li>
-                <li><a href="#">Qwickly Course Tool</a></li>
-                <li><a href="#">Global Announcements</a></li>
-            </ul>
-        </td>
-
-        <!-- Third Column: Profile Information-->
-        <td valign="top" style="width: 60vw;">
-            <h1>Jose Annunziato</h1>
-            <form>
-                <label>Name:* </label>
-                <input id="field-name" type="text" value="Jose Annunziato">
-                <label>Pronouns: </label>
-                <select id="select-pronouns">
-                    <option value="None" selected>None</option>
-                    <option value="He/Him">He/Him</option>
-                    <option value="She/Her">She/Her</option>
-                    <option value="They/Them">They/Them</option>
-                    <option value="Other">Others</option>
-                </select>
-                <br><br>
-                <label>Title: </label>
-                <input id="field-title">
-
-                <h2>Contact</h2>
-                No registered services, you can add some on the <a href="#">settings</a> page.
-
-                <h2>Biography</h2>
-                Faculty, Software Engineer, Ai, Space, and renewables enthusiast.
-                <br>
-                <textarea cols="57" id="textarea-bio">Faculty, Software Engineer, Ai, Space, and renewables enthusiast.</textarea>
-                <h2>Links</h2>
-                <ul>
-                    <li><a href="https://youtube.com">Youtube</a><a href="https://youtube.com" style="text-decoration: none;"> &#10063; Links to an external site</div></a></li>
-                </ul>
-                <table>
-                    <tr>
-                        <td>
-                            <h3 style="text-align: center;">Title</h3>
-                            <input id="field-title" value="YouTube"> &#8594
-                            <br>
-                            <button type="button">Add another link</button>
-                            <br>
-                            <button type="button">Cancel</button>
-                            <button type="button">Save Profile</button>
-                            <br>
-                            <button type="button">Edit Profile</button>
-                            <button type="button">Cancel Profile</button>
-                        </td>
-                        <td valign="top">
-                            <h3 style="text-align: center;">URL</h3>
-                            <input type="text" id="field-url" value="https://www.youtube.com">
-                            <a href="#">Remove</a>
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </td>
-            </table> 
+                    <ul class="navbar-nav flex-column">
+                        <li class="nav-item custom-nav-item">
+                            <img class="custom-logo" src="../assignments/northeastern-logo-nobg.png"">
+                            </li>
+                            <li class=" nav-item custom-nav-item">
+                            <div class="white-selected">
+                                <a href="../profile/index.html" class="nav-link custom-nav-link">
+                                    <i class="fa-solid fa-user custom-icon" style="color: grey;"></i>
+                                    <br />
+                                    <span>Account</span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item custom-nav-item">
+                            <a href="../dashboard/index.html" class="nav-link custom-nav-link">
+                                <i class="fa-solid fa-gauge custom-icon"></i>
+                                <br />
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item custom-nav-item">
+                            <a href="../home.html" class="nav-link custom-nav-link custom-nav-link-active">
+                                <i class="fa-solid fa-book custom-icon"></i>
+                                <br />
+                                <span>Courses</span>
+                            </a>
+                        </li>
+                        <li class="nav-item custom-nav-item">
+                            <a href="#" class="nav-link custom-nav-link">
+                                <i class="fa-regular fa-calendar-days custom-icon"></i>
+                                <br />
+                                <span>Calendar</span>
+                            </a>
+                        </li>
+                        <li class="nav-item custom-nav-item">
+                            <a href="#" class="nav-link custom-nav-link">
+                                <i class="fa-solid fa-inbox custom-icon"></i>
+                                <br />
+                                <span>Inbox</span>
+                            </a>
+                        </li>
+                        <li class="nav-item custom-nav-item">
+                            <a href="#" class="nav-link custom-nav-link">
+                                <i class="fa-solid fa-clock custom-icon"></i>
+                                <br />
+                                <span>History</span>
+                            </a>
+                        </li>
+                        <li class="nav-item custom-nav-item">
+                            <a href="#" class="nav-link custom-nav-link">
+                                <i class="fa-solid fa-network-wired custom-icon"></i>
+                                <br />
+                                <span>Studio</span>
+                            </a>
+                        </li>
+                        <li class="nav-item custom-nav-item">
+                            <a href="#" class="nav-link custom-nav-link">
+                                <i class="fa fa-sign-out custom-icon" aria-hidden="true"></i> <br />
+                                <span>Commons</span>
+                            </a>
+                        </li>
+                        <li class="nav-item custom-nav-item">
+                            <a href="#" class="nav-link custom-nav-link">
+                                <i class="fa-solid fa-question custom-icon"></i>
+                                <br />
+                                <span>Help</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- </div> -->
+                </nav>
+            </div>
+            <div class="row col-10">
+                <div class="input-group m-2 fs-5">
+                    <i class="fa-solid fa-bars mx-3 mt-1" style="color: red"></i>
+                    <p class="mx-3 text-muted">Jose Annunziato's Profile</p>
+                </div>
+                <hr>
+                <div class="col-3">
+                    <ul class="list-group no-border">
+                        <li class="list-group-item"><a href="#">Notifications</a></li>
+                        <li class="list-group-item active-item"><a href="../profile/index.html">Profile</a></li>
+                        <li class="list-group-item"><a href="#">Files</a></li>
+                        <li class="list-group-item"><a href="#">Settings</a></li>
+                        <li class="list-group-item"><a href="#">ePortfolios</a></li>
+                        <li class="list-group-item"><a href="#">Shared Content</a></li>
+                        <li class="list-group-item"><a href="#">The Hub</a></li>
+                        <li class="list-group-item"><a href="#">Qwickly Course Tools</a></li>
+                        <li class="list-group-item"><a href="#">Global Announcements</a></li>
+                    </ul>
+                </div>
+                <div class="row col-9">
+                    <div class="col-8">
+                        <div class="circular-frame">
+                            <i class="fa fa-user fa-4x"></i>
+                        </div>
+                        <div class="mb-3">
+                            <label for="name" class="form-label"><strong>Name:*</strong></label>
+                            <input type="text" class="form-control" id="name" value="Jose Annunziato">
+                            <label for="name" class="form-label"><strong>Pronouns:</strong></label>
+                            <select class="form-select">
+                                <option selected>None</option>
+                                <option value="1">He/Him</option>
+                                <option value="2">She/Her</option>
+                                <option value="3">They/Them</option>
+                            </select>
+                            <label for="title" class="form-label"><strong>Title:</strong></label>
+                            <input type="text" class="form-control" id="title">
+                        </div>
+                        <br>
+                        <div class="personal-data">
+                            <h4>Contact</h4>
+                            <p>No registered services, you could some on the <a href="#">settings</a> page.</p>
+                            <h4>Biography</h4>
+                            <textarea cols="60" rows="5">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+                        </div>
+                        <br>
+                        <div class="external-links">
+                            <h4>Links</h4>
+                            <div class="row text-center">
+                                <div class="col-6">Title</div>
+                                <dic class="col-6">Url</dic>
+                            </div>
+                            <div class="row">
+                                <div class="col-5">
+                                    <input type="text" class="form-control" value="YouTube">
+                                </div>
+                                <div class="col-1">
+                                    <i class="fa fa-long-arrow-right"></i>
+                                </div>
+                                <div class="col-5">
+                                    <input type="text" class="form-control" value="https://www.youtube.com">
+                                </div>
+                                <div class="col-1">
+                                    <a href=""><i class="fa-solid fa-x"></i></a>
+                                </div>
+                            </div>
+                            <button class="mt-1 btn btn-light">Add Another Link</button>
+                        </div>
+                        <hr>
+                        <div class="float-end">
+                            <a class="btn btn-light" href="../profile/index.html">Cancel</a>
+                            <a class="btn btn-danger" href="../profile/index.html" style="background-color: red;">Save Profile</a>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <a href="../profile/index.html" class="btn btn-light">
+                            <i class="fa fa-pencil fa-rotate-270" aria-hidden="true">
+                            </i>
+                            Cancel Editing
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
