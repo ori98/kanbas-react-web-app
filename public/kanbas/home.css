@@ -1,0 +1,157 @@
+a {
+    text-decoration: none;
+    color: red;
+    font-weight: 400;
+}
+
+a:hover {
+    color: red;
+}
+
+.fa-check-circle,
+.fa-circle-check {
+    color: green;
+}
+
+.float-right {
+    float: right;
+    display: inline;
+}
+
+.fa-link {
+    color: #8fbc8f;
+}
+
+.list-group {
+    border-radius: 0%;
+    font-weight: 600;
+}
+
+.list-group-item {
+    border-radius: 0%;
+}
+
+.normal-text {
+    font-weight: 400;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.green-border-left {
+    border-left: 5px solid green;
+}
+
+.list-group-item {
+    flex: 1;
+}
+
+.close {
+    background-color: white;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+.no-border {
+    border: none;
+}
+
+.black-navbar {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.modules-text {
+    text-align: center;
+}
+
+
+.icon {
+    font-size: 24px;
+}
+
+.custom-navbar {
+    position: fixed !important;
+    background-color: black;
+    width: 80px;
+    height: 100%;
+}
+
+.custom-nav-link:hover {
+    background-color: white !important;
+    color: red !important;
+}
+
+.custom-nav-link {
+    color: white !important;
+}
+
+.custom-nav-item {
+    margin: 0;
+}
+
+.custom-nav-link {
+    padding: 8px;
+    font-size: 12px;
+    color: white;
+    display: block;
+    text-align: center;
+}
+
+.custom-nav-link-active {
+    background-color: white !important;
+    color: red !important;
+}
+
+.custom-icon {
+    text-align: center;
+    font-size: 30px;
+    color: red;
+}
+
+.custom-logo {
+    height: 5rem;
+    width: 5rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.custom-active {
+    background-color: white;
+    color: red;
+}
+
+.custom-fa-solid {
+    align-items: center;
+}
+
+@media (min-width: 576px) {
+    .margin-container {
+        margin-left: 80px !important;
+    }
+
+    .navbar-nav {
+        --bs-nav-link-hover-color: red !important;
+        display: block;
+        height: 100vh;
+        overflow-y: auto;
+    }
+
+
+}
+
+.list-group-item .fa-eye-slash {
+    float: right;
+    color: black;
+}
+
+.active-list-item {
+    border-left: 2px black solid;
+}

@@ -1,0 +1,68 @@
+.float-right {
+    float: right;
+}
+
+.nav-link {
+    color: red;
+}
+
+.nav-link:hover {
+    color: red;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.file-upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; 
+    width: 400px;
+    border: 2px solid #ccc; 
+    background-color: white;
+}
+
+#files {
+    display: none;
+}
+
+.custom-button {
+    padding: 10px 20px;
+    background-color: #f8f9fa; 
+    cursor: pointer;
+    border: 2px solid #ccc; 
+}
+
+.custom-button:hover {
+    background-color: #f8f9fa; /* Change the background color on hover */
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.form-check-label {
+    color: lightgrey;
+  }
+
+.drop-down-width {
+    width: 25vw;
+    height: 40px;
+}
+
+.date-width {
+    height: 40px;
+    width: 20vw;
+}
+
+.float-right {
+    float: right;
+    display: inline;
+}
+
+#media-type {
+    opacity: 0.5;
+}
