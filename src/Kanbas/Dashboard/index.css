@@ -1,0 +1,14 @@
+.blue-background {
+    background-color: #1570AA;
+    height: 160px;
+}
+
+.card {
+    width: 270px;
+    margin: 30px 15px !important;
+    border-radius: 2px;
+}
+
+.ms-5 {
+    padding-left: 20px;
+}

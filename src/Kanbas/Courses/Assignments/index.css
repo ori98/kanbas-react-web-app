@@ -1,0 +1,15 @@
+div .search-bar{
+    width: 15rem;
+}
+
+.left-green-border {
+    border-left: 4px solid green !important;
+}
+
+.big-icon {
+    font-size: 1.5rem;
+}
+
+.btn {
+    border: 1px solid gray;
+}

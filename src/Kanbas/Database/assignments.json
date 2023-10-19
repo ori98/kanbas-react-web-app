@@ -1,0 +1,131 @@
+[
+  { "_id": "A101", "title": "Propulsion Assignment", "course": "RS101" },
+  { "_id": "A102", "title": "Combustion Analysis", "course": "RS101" },
+  { "_id": "A103", "title": "Nozzle Design Project", "course": "RS101" },
+  { "_id": "A201", "title": "Aerodynamics Quiz", "course": "RS102" },
+  { "_id": "A202", "title": "Flow Analysis", "course": "RS102" },
+  { "_id": "A203", "title": "Heating Analysis", "course": "RS102" },
+  { "_id": "A301", "title": "Structural Design Task", "course": "RS103" },
+  { "_id": "A302", "title": "Orbital Calculations", "course": "RS103" },
+  { "_id": "A303", "title": "Systems Engineering Exam", "course": "RS103" },
+  {
+    "_id": "A10401",
+    "title": "Advanced Rocket Propulsion Assignment",
+    "course": "RS104"
+  },
+  {
+    "_id": "A10402",
+    "title": "Rocket Systems Analysis",
+    "course": "RS104"
+  },
+  {
+    "_id": "A10403",
+    "title": "Spacecraft Navigation Project",
+    "course": "RS104"
+  },
+  {
+    "_id": "A10501",
+    "title": "Spacecraft Propulsion Analysis",
+    "course": "RS105"
+  },
+  {
+    "_id": "A10502",
+    "title": "Space Mission Planning Assignment",
+    "course": "RS105"
+  },
+  {
+    "_id": "A10503",
+    "title": "Satellite Systems Project",
+    "course": "RS105"
+  },
+  {
+    "_id": "A10601",
+    "title": "Spacecraft Systems Engineering Task",
+    "course": "RS106"
+  },
+  {
+    "_id": "A10602",
+    "title": "Space Environment Analysis Assignment",
+    "course": "RS106"
+  },
+  {
+    "_id": "A10603",
+    "title": "Spacecraft Propulsion Design Project",
+    "course": "RS106"
+  },
+  {
+    "_id": "A10701",
+    "title": "Spacecraft Avionics Assignment",
+    "course": "RS107"
+  },
+  {
+    "_id": "A10702",
+    "title": "Spacecraft Thermal Control Analysis",
+    "course": "RS107"
+  },
+  {
+    "_id": "A10703",
+    "title": "Spacecraft Structural Analysis Project",
+    "course": "RS107"
+  },
+  {
+    "_id": "A10801",
+    "title": "Spacecraft Communication Systems Task",
+    "course": "RS108"
+  },
+  {
+    "_id": "A10802",
+    "title": "Spacecraft Power Systems Assignment",
+    "course": "RS108"
+  },
+  {
+    "_id": "A10803",
+    "title": "Spacecraft Attitude Control Analysis",
+    "course": "RS108"
+  },
+  {
+    "_id": "A10901",
+    "title": "Planetary Science Research Project",
+    "course": "RS109"
+  },
+  {
+    "_id": "A10902",
+    "title": "Astrobiology Exploration Assignment",
+    "course": "RS109"
+  },
+  {
+    "_id": "A10903",
+    "title": "Exoplanet Research Project",
+    "course": "RS109"
+  },
+  {
+    "_id": "A11001",
+    "title": "Space Law and Policy Analysis",
+    "course": "RS110"
+  },
+  {
+    "_id": "A11002",
+    "title": "Ethical Considerations in Space Exploration",
+    "course": "RS110"
+  },
+  {
+    "_id": "A11003",
+    "title": "International Space Cooperation Project",
+    "course": "RS110"
+  },
+  {
+    "_id": "A11101",
+    "title": "Space Tourism Business Plan",
+    "course": "RS111"
+  },
+  {
+    "_id": "A11102",
+    "title": "Space Entrepreneurship Venture Proposal",
+    "course": "RS111"
+  },
+  {
+    "_id": "A11103",
+    "title": "Space Policy Analysis Report",
+    "course": "RS111"
+  }
+]

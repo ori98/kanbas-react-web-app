@@ -1,0 +1,9 @@
+.custom-list-group-item {
+    border: none !important;
+}
+
+.active-item {
+    border-left: 2px solid black !important;
+    color: black !important;
+    border-radius: 0 !important;
+}

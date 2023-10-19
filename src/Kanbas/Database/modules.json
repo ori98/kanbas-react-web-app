@@ -1,0 +1,231 @@
+[
+  {
+    "_id": "M101",
+    "name": "Introduction to Rocket Propulsion",
+    "description": "Basic principles of rocket propulsion and rocket engines.",
+    "course": "RS101"
+  },
+  {
+    "_id": "M102",
+    "name": "Fuel and Combustion",
+    "description": "Understanding rocket fuel, combustion processes, and efficiency.",
+    "course": "RS101"
+  },
+  {
+    "_id": "M103",
+    "name": "Nozzle Design",
+    "description": "Principles of rocket nozzle design and performance optimization.",
+    "course": "RS101"
+  },
+  {
+    "_id": "M201",
+    "name": "Fundamentals of Aerodynamics",
+    "description": "Basic aerodynamic concepts and fluid dynamics principles.",
+    "course": "RS102"
+  },
+  {
+    "_id": "M202",
+    "name": "Subsonic and Supersonic Flow",
+    "description": "Understanding subsonic and supersonic aerodynamic behaviors.",
+    "course": "RS102"
+  },
+  {
+    "_id": "M203",
+    "name": "Aerodynamic Heating",
+    "description": "Study of aerodynamic heating and thermal protection systems.",
+    "course": "RS102"
+  },
+  {
+    "_id": "M301",
+    "name": "Spacecraft Structural Design",
+    "description": "Fundamentals of designing spacecraft structures and materials selection.",
+    "course": "RS103"
+  },
+  {
+    "_id": "M302",
+    "name": "Orbital Mechanics",
+    "description": "Understanding orbital dynamics and mission planning.",
+    "course": "RS103"
+  },
+  {
+    "_id": "M303",
+    "name": "Spacecraft Systems Engineering",
+    "description": "Overview of spacecraft systems and subsystems engineering.",
+    "course": "RS103"
+  },
+  {
+    "_id": "M401",
+    "name": "Advanced Rocket Propulsion",
+    "description": "In-depth study of advanced rocket propulsion technologies.",
+    "course": "RS101"
+  },
+  {
+    "_id": "M402",
+    "name": "Rocket Propulsion Testing",
+    "description": "Experimental testing and evaluation of rocket propulsion systems.",
+    "course": "RS101"
+  },
+  {
+    "_id": "M501",
+    "name": "Hypersonic Aerodynamics",
+    "description": "Exploration of aerodynamic behaviors at hypersonic speeds.",
+    "course": "RS102"
+  },
+  {
+    "_id": "M502",
+    "name": "Aerodynamic Simulation",
+    "description": "Simulating aerodynamic phenomena using computational tools.",
+    "course": "RS102"
+  },
+  {
+    "_id": "M601",
+    "name": "Advanced Structural Materials",
+    "description": "Advanced materials for spacecraft structural design.",
+    "course": "RS103"
+  },
+
+  {
+    "_id": "M10401",
+    "name": "Advanced Rocket Science",
+    "description": "Exploring advanced concepts in rocket science.",
+    "course": "RS104"
+  },
+  {
+    "_id": "M10402",
+    "name": "Rocket Propulsion Optimization",
+    "description": "Optimizing rocket propulsion systems for efficiency.",
+    "course": "RS104"
+  },
+  {
+    "_id": "M10403",
+    "name": "Spacecraft Navigation",
+    "description": "Fundamentals of spacecraft navigation and guidance.",
+    "course": "RS104"
+  },
+  {
+    "_id": "M10501",
+    "name": "Spacecraft Propulsion Systems",
+    "description": "In-depth study of spacecraft propulsion technologies.",
+    "course": "RS105"
+  },
+  {
+    "_id": "M10502",
+    "name": "Spacecraft Instrumentation",
+    "description": "Instrumentation and sensors for spacecraft systems.",
+    "course": "RS105"
+  },
+  {
+    "_id": "M10503",
+    "name": "Space Mission Planning",
+    "description": "Planning and execution of space missions.",
+    "course": "RS105"
+  },
+  {
+    "_id": "M10601",
+    "name": "Satellite Systems Engineering",
+    "description": "Engineering aspects of satellite systems and subsystems.",
+    "course": "RS106"
+  },
+  {
+    "_id": "M10602",
+    "name": "Space Environment Analysis",
+    "description": "Analysis of the space environment and its effects on spacecraft.",
+    "course": "RS106"
+  },
+  {
+    "_id": "M10603",
+    "name": "Spacecraft Propulsion Design",
+    "description": "Designing propulsion systems for spacecraft.",
+    "course": "RS106"
+  },
+  {
+    "_id": "M10701",
+    "name": "Spacecraft Avionics",
+    "description": "Avionics systems and electronics for spacecraft.",
+    "course": "RS107"
+  },
+  {
+    "_id": "M10702",
+    "name": "Spacecraft Thermal Control",
+    "description": "Thermal control systems for spacecraft.",
+    "course": "RS107"
+  },
+  {
+    "_id": "M10703",
+    "name": "Spacecraft Structural Analysis",
+    "description": "Structural analysis of spacecraft components.",
+    "course": "RS107"
+  },
+  {
+    "_id": "M10801",
+    "name": "Spacecraft Communication Systems",
+    "description": "Communication systems for spacecraft.",
+    "course": "RS108"
+  },
+  {
+    "_id": "M10802",
+    "name": "Spacecraft Power Systems",
+    "description": "Power generation and storage for spacecraft.",
+    "course": "RS108"
+  },
+  {
+    "_id": "M10803",
+    "name": "Spacecraft Attitude Control",
+    "description": "Control of spacecraft attitude and orientation.",
+    "course": "RS108"
+  },
+  {
+    "_id": "M10901",
+    "name": "Planetary Science",
+    "description": "Exploration and study of planets and celestial bodies.",
+    "course": "RS109"
+  },
+  {
+    "_id": "M10902",
+    "name": "Astrobiology",
+    "description": "Study of life in the universe and its potential existence.",
+    "course": "RS109"
+  },
+  {
+    "_id": "M10903",
+    "name": "Exoplanet Research",
+    "description": "Research and analysis of exoplanets.",
+    "course": "RS109"
+  },
+  {
+    "_id": "M11001",
+    "name": "Space Law and Policy",
+    "description": "Legal and policy aspects of space exploration and use.",
+    "course": "RS110"
+  },
+  {
+    "_id": "M11002",
+    "name": "Space Ethics",
+    "description": "Ethical considerations in space exploration and activities.",
+    "course": "RS110"
+  },
+  {
+    "_id": "M11003",
+    "name": "International Space Cooperation",
+    "description": "Collaboration and cooperation in international space endeavors.",
+    "course": "RS110"
+  },
+  {
+    "_id": "M11101",
+    "name": "Space Tourism",
+    "description": "Exploring the emerging field of space tourism.",
+    "course": "RS111"
+  },
+  {
+    "_id": "M11102",
+    "name": "Space Entrepreneurship",
+    "description": "Entrepreneurial opportunities in the space industry.",
+    "course": "RS111"
+  },
+  {
+    "_id": "M11103",
+    "name": "Space Policy Analysis",
+    "description": "Analysis of policies shaping the space sector.",
+    "course": "RS111"
+  }
+]
