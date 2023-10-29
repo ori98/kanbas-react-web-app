@@ -10,9 +10,10 @@ import Grades from "./Grades";
 
 import "./index.css";
 
-function Courses() {
+function Courses({ courses }) {
+    console.log("Inside Courses.js: ", courses);
     const { courseId } = useParams();
-    const course = db.courses.find((course) => course._id === courseId);
+    const course = courses.find((course) => course._id === courseId);
     const { pathname } = useLocation();
     const pageName = pathname.substring(pathname.lastIndexOf("/") + 1);
 
