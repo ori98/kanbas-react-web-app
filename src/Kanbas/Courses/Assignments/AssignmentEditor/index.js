@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useParams, Link, useLocation } from "react-router-dom";
-import db from "../../../Database";
+// import db from "../../../Database";
 import { BsCheckCircleFill } from "react-icons/bs";
 import { IoEllipsisVertical } from "react-icons/io5";
 
@@ -8,15 +8,15 @@ import { useSelector, useDispatch } from "react-redux";
 
 import {
     addAssignment,
-    deleteAssignment,
     updateAssignment,
     selectAssignment,
+    resetAssignment
 } from "../assignmentsReducer";
 
 function AssignmentEditor() {
     const dispatch = useDispatch();
 
-    const { assignmentId } = useParams();
+    // const { assignmentId } = useParams();
     const assignment = useSelector((state) => state.assignmentsReducer.assignment);
 
     const { courseId } = useParams();
@@ -30,6 +30,7 @@ function AssignmentEditor() {
         pathname.includes("Create")?
             dispatch(addAssignment({ ...assignment, course: courseId })) :
             dispatch(updateAssignment(assignment));
+            dispatch(resetAssignment());
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
 
