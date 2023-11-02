@@ -163,8 +163,9 @@ function ModuleList() {
                   </div>
                   <div className="my-2 float-end">
                     <button
-                      onChange={(e) =>
-                        dispatch(setModule({ ...module, description: e.target.value }))
+                      onClick={(e) =>
+                        // dispatch(setModule({ ...module, description: e.target.value }))
+                        dispatch(deleteModule(module._id))
                       }
                       className="btn btn-danger my-2 float-end"
                     >
