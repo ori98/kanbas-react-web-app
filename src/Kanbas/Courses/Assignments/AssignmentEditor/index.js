@@ -101,7 +101,7 @@ function AssignmentEditor() {
 
                 <hr />
                 <div className="float-end">
-                    <Link to={`/Kanbas/Courses/${courseId}/Assignments`} className="btn btn-light mx-2 border-1">
+                    <Link onClick={() => dispatch(resetAssignment())} to={`/Kanbas/Courses/${courseId}/Assignments`} className="btn btn-light mx-2 border-1">
                         Cancel
                     </Link>
                     <button onClick={handleSave} className="btn btn-danger me-2">
