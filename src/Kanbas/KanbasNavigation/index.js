@@ -6,7 +6,7 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 import { HiMiniInboxStack } from "react-icons/hi2";
 import { AiOutlineHistory } from "react-icons/ai";
 import { FaNetworkWired } from "react-icons/fa";
-import { IoHelpCircleOutline } from 'react-icons/io5'
+import { IoHelpCircleOutline } from 'react-icons/io5';
 import "./index.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -28,10 +28,12 @@ function KanbasNavigation() {
 
   const { pathname } = useLocation();
   return (
+    <div>
 
-    <div className="list-group wd-kanbas-navigation" style={{ width: 150 }}>
 
-      <nav className="navbar scrollable-icons">
+    <div className="list-group wd-kanbas-navigation d-none d-md-block" style={{ width: 150 }}>
+
+      <nav className="d-none d-md-block navbar scrollable-icons">
         <ul className="navbar-nav flex-column">
           <li className="nav-item mb-0 mt-0">
             <img className="logo" src="images/northeastern-logo-nobg.png" alt="northeastern-logo" />
@@ -50,6 +52,8 @@ function KanbasNavigation() {
           })}
         </ul>
       </nav>
+    </div>
+
     </div>
   );
 }

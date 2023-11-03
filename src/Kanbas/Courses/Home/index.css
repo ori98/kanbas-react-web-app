@@ -1,0 +1,9 @@
+.flex-nowrap-custom {
+	display: flex;
+	flex-wrap: nowrap;
+  }
+  
+  .status-min-width {
+	min-width: 200px !important; 
+	flex-shrink: 0 !important; 
+  }

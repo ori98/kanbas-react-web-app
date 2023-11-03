@@ -1,3 +1,10 @@
 .breadcrumb {
     --bs-breadcrumb-divider: '>' !important;
 }
+
+.route-width {
+    top: 50px;
+    @media (min-width: 768px) {
+        left: 320px;
+    }
+}

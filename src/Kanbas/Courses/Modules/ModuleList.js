@@ -78,8 +78,8 @@ function ModuleList() {
   const dispatch = useDispatch();
 
   return (
-    <div>
-      <div className="btn-group d-flex justify-content-end">
+    <div >
+      <div className="btn-group d-flex justify-content-end top-space">
         <div className="btn-group d-flex justify-content-end">
           <span className="float-end">
             <div type="button" className="btn btn-light mx-2"> Collapse All</div>
@@ -138,7 +138,7 @@ function ModuleList() {
             </form>
           </div>
         </li>
-        {modules
+        {modules && modules
           .filter((module) => module.course === courseId)
           .map((module, index) => (
             <li key={index} className="list-group-item list-group-item-action list-group-item-secondary mb-4 p-0" style={{ borderRadius: "0" }}>

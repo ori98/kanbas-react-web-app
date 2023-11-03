@@ -5,3 +5,9 @@
 .joined-ellipsis {
     margin-left: -10px;
 }
+
+.top-space {
+    @media (max-width: 768px) {
+        margin-top: 50px;
+    }
+}

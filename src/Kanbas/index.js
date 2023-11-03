@@ -9,6 +9,7 @@ import { useState } from "react";
 
 import store from "./store";
 import { Provider } from "react-redux";
+import SmallNavigation from "./SmallNavigation";
 
 function Kanbas() {
 
@@ -37,6 +38,7 @@ function Kanbas() {
 
   return (
     <Provider store={store}>
+      <SmallNavigation />
       <div className="d-flex">
         <KanbasNavigation />
         <div className="flex-grow-1">

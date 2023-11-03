@@ -8,7 +8,7 @@ function CourseNavigation() {
   const { courseId } = useParams();
   const { pathname } = useLocation();
   return (
-    <div className="list-group" style={{ width: 150 }}>
+    <div className="d-none d-md-block list-group" style={{ width: 150 }}>
       <small className="muted-text"> 
       202310_1 Fall2024 
       </small>
