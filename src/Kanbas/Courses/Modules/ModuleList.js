@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { FaEllipsisV, FaPlus, FaCheckCircle } from "react-icons/fa";
 
@@ -13,14 +13,33 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
 
+import * as client from "./client";
+
+import { findModulesForCourse, createModule } from "./client";
+
 function ModuleList() {
+  const dispatch = useDispatch();
+
   const { courseId } = useParams();
   // const modules = db.modules;
   // const [modules, setModules] = useState(db.modules);
 
   const modules = useSelector((state) => state.modulesReducer.modules);
+  useEffect(() => {
+    findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+    );
+  }, [courseId, dispatch]);
+
+  const handleAddModule = () => {
+    createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
 
   // creating a module
 
@@ -75,7 +94,18 @@ function ModuleList() {
   //   );
   // }
 
-  const dispatch = useDispatch();
+  // handling deleting module
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  // updating a module
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
 
   return (
     <div >
@@ -129,8 +159,9 @@ function ModuleList() {
                   }
                 ></textarea>
               </div>
-              <button type="submit" className="btn btn-success my-2 mx-2" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
-              <button onClick={() => dispatch(updateModule(module))}
+              {/* <button type="submit" className="btn btn-success my-2 mx-2" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button> */}
+              <button type="submit" className="btn btn-success my-2 mx-2" onClick={handleAddModule}>Add</button>
+              <button onClick={handleUpdateModule}
               className="btn btn-primary my-2">
                 Update
               </button>
@@ -163,10 +194,7 @@ function ModuleList() {
                   </div>
                   <div className="my-2 float-end">
                     <button
-                      onClick={(e) =>
-                        // dispatch(setModule({ ...module, description: e.target.value }))
-                        dispatch(deleteModule(module._id))
-                      }
+                      onClick={() => handleDeleteModule(module._id)}
                       className="btn btn-danger my-2 float-end"
                     >
                       Delete

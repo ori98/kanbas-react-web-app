@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useState } from "react";
 // import db from "../../Database";
@@ -12,15 +12,21 @@ import { IoEllipsisVerticalSharp } from "react-icons/io5";
 import { GiNotebook } from "react-icons/gi";
 import { LiaEllipsisVSolid } from "react-icons/lia";
 import { AiFillDelete } from "react-icons/ai";
+import Modal from 'react-bootstrap/Modal';
 
 import { useSelector, useDispatch } from "react-redux";
 
 import {
-  addAssignment,
+  // addAssignment,
   deleteAssignment,
-  updateAssignment,
+  // updateAssignment,
   selectAssignment,
+  setAssignments,
 } from "./assignmentsReducer";
+
+import * as service from "./service";
+
+import { findAssignmentForCourse } from "./service";
 
 
 function Assignments() {
@@ -30,13 +36,38 @@ function Assignments() {
 
   // storing assignments
   // const assignments = db.assignments;
+
   const assignments = useSelector((state) => state.assignmentsReducer.assignments);
 
-  const [isModalOpen, setModalOpen] = useState(false);
+  useEffect(() => {
+    findAssignmentForCourse(courseId)
+      .then((assignments) =>
+        dispatch(setAssignments(assignments))
+      );
+  }, [courseId, dispatch]);
 
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [selectedAssignmentId, setSelectedAssignmentId] = useState(null);
+
+  // getting course assignments
   const courseAssignments = assignments.filter(
     (assignment) => assignment.course === courseId);
-  console.log(courseAssignments);
+
+  // handling deleting of assignment
+  const handleDeleteAssignment = (assignmentId) => {
+    console.log("handle delete triggeded: ", assignmentId);
+    service.deleteAssignment(assignmentId).then((status) => {
+      dispatch(deleteAssignment(assignmentId));
+    }
+    );
+    setModalOpen(false)
+  };
+
+  const openModal = (assignmentId) => {
+    setSelectedAssignmentId(assignmentId);
+    setModalOpen(true);
+  };
+
   return (
     <div>
       {/* <h2>Assignments for course {courseId}</h2> */}
@@ -79,11 +110,11 @@ function Assignments() {
               <LiaEllipsisVSolid />
 
               {/* modal section referred from ChatGPT as bootstrap modal was not working */}
-              <button className="btn btn-danger mx-2" onClick={() => setModalOpen(true)}>
+              <button className="btn btn-danger mx-2" onClick={() => openModal(assignment._id)}>
                 <AiFillDelete />
               </button>
 
-              {isModalOpen && (
+              {/* {isModalOpen && (
                 <div className="modal fade show" style={{ display: 'block' }} tabIndex="-1" aria-labelledby="deleteModalLabel" aria-hidden="false">
                   <div className="modal-dialog">
                     <div className="modal-content">
@@ -96,14 +127,23 @@ function Assignments() {
                       </div>
                       <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" onClick={() => setModalOpen(false)}>Cancel</button>
-                        <button type="button" className="btn btn-danger" onClick={() => { dispatch(deleteAssignment(assignment._id)); setModalOpen(false); }}>Delete</button>
+                        <button type="button" className="btn btn-danger" onClick={ handleDeleteAssignment }>Delete</button>
                       </div>
                     </div>
                   </div>
                 </div>
-              )}
-
+              )} */}
             </span>
+            <Modal show={isModalOpen} onHide={() => setModalOpen(false)}>
+              <Modal.Header closeButton>
+                <Modal.Title>Delete Assignment</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>Are you sure you want to delete this assignment?</Modal.Body>
+              <Modal.Footer>
+                <button type="button" className="btn btn-secondary" onClick={() => setModalOpen(false)}>Cancel</button>
+                <button type="button" className="btn btn-danger" onClick={() => handleDeleteAssignment(assignment._id)}>Delete</button>
+              </Modal.Footer>
+            </Modal>
           </div>
         ))}
       </div>

@@ -46,6 +46,8 @@ function Dashboard(
     //     );
     // };
 
+    console.log(courses);   
+
     return (
         <div className="ms-5">
             <div className="row">
@@ -89,9 +91,9 @@ function Dashboard(
                 <div className="row">
                     <div className="d-flex flex-wrap">
                         {courses.map((course) => (
-                            <div key={course._id} className="col-lg-3 col-md-4 col-sm-6 col-12">
-                                <Link to={`/Kanbas/Courses/${course._id}`} className="card text-decoration-none mb-4">
-                                    {console.log(course._id)}
+                            <div key={course.number} className="col-lg-3 col-md-4 col-sm-6 col-12">
+                                <Link to={`/Kanbas/Courses/${course.number}`} className="card text-decoration-none mb-4">
+                                    {console.log(course.number)}
                                     <div className="blue-background">
                                         <FaEllipsisV className="float-end m-2 text-light" />
                                     </div>
@@ -107,7 +109,7 @@ function Dashboard(
                                             className="btn btn-danger float-end"
                                             onClick={(event) => {
                                                 event.preventDefault();
-                                                deleteCourse(course._id);
+                                                deleteCourse(course);
                                             }}>
                                             Delete
                                         </button>

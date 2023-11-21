@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate, useParams, Link, useLocation } from "react-router-dom";
 // import db from "../../../Database";
 import { BsCheckCircleFill } from "react-icons/bs";
@@ -10,27 +10,46 @@ import {
     addAssignment,
     updateAssignment,
     selectAssignment,
-    resetAssignment
+    resetAssignment,
+    setAssignments,
 } from "../assignmentsReducer";
+
+import * as service from "../service";
 
 function AssignmentEditor() {
     const dispatch = useDispatch();
+    const { courseId } = useParams();
 
     // const { assignmentId } = useParams();
     const assignment = useSelector((state) => state.assignmentsReducer.assignment);
+    useEffect(() => {
+        service.findAssignmentForCourse(courseId)
+            .then((assignments) =>
+                dispatch(setAssignments(assignments))
+            );
+    }, [courseId, dispatch]);
 
-    const { courseId } = useParams();
     const navigate = useNavigate();
 
     const pathname = useLocation().pathname;
 
+    const handleAddModule = () => {
+        service.createAssignment(courseId, assignment).then((assignment) => {
+            dispatch(addAssignment({ ...assignment, course: courseId }));
+        });
+    };
+
+    const handleUpdateModule = () => {
+        service.updateAssignment(assignment).then((assignment) => {
+            dispatch(updateAssignment(assignment));
+        });
+    };
+
     const handleSave = () => {
         console.log("Actually saving assignment TBD in later assignments");
 
-        pathname.includes("Create")?
-            dispatch(addAssignment({ ...assignment, course: courseId })) :
-            dispatch(updateAssignment(assignment));
-            dispatch(resetAssignment());
+        pathname.includes("Create") ? handleAddModule() : handleUpdateModule();
+        dispatch(resetAssignment());
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
 
@@ -53,29 +72,34 @@ function AssignmentEditor() {
                     <input id="assignmentName" value={assignment.title}
                         onChange={(e) => dispatch(selectAssignment({ ...assignment, title: e.target.value }))}
                         className="form-control mb-2 my-3" />
-                    
+
                     <label htmlFor="assignmentDescription" className="text-muted">Assignment Description:</label>
                     <input id="assignmentDescription" value={assignment.description}
                         onChange={(e) => dispatch(selectAssignment({ ...assignment, description: e.target.value }))}
                         className="form-control mb-2 my-3" />
-                    
+
                     <div className="col-12">
                         <div className="row">
-                            <div className="col-3"> 
+                            <div className="col-3">
                                 <label htmlFor="assignmentPoints" className="float-end text-muted"><small>Points </small></label>
                             </div>
-                            <div className="col-9"> 
-                                <input id="assignmentPoints" className="form-control" type="number" value={assignment.points} /> 
+                            <div className="col-9">
+                                <input id="assignmentPoints" 
+                                    className="form-control" 
+                                    type="number" 
+                                    value={assignment.points} 
+                                    onChange={(e) => dispatch(selectAssignment({ ...assignment, points: e.target.value })) }
+                                />
                             </div>
                         </div>
 
                         <div className="row">
-                            <div className="col-3"> 
+                            <div className="col-3">
                                 <small className="float-end text-muted">Assign</small>
                             </div>
                             <div className="col-9">
-                                
-                                <form className= "border my-2 rounded-3 p-2">
+
+                                <form className="border my-2 rounded-3 p-2">
                                     <div className="row ms-2">
                                         <div className="col-12">
                                             <label htmlFor="dueDate" className="bold">Due</label>

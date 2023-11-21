@@ -1,4 +1,4 @@
-import db from "../../Kanbas/Database";
+// import db from "../../Kanbas/Database";
 import { FaBars } from "react-icons/fa";
 import { Navigate, Route, Routes, useLocation, useParams } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
@@ -8,14 +8,31 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 import "./index.css";
 
-function Courses({ courses }) {
-    console.log("Inside Courses.js: ", courses);
+// function Courses({ courses }) {
+function Courses() {
+    const URL = "http://localhost:4000/api/courses";
+
     const { courseId } = useParams();
-    const course = courses.find((course) => course._id === courseId);
+    // const course = courses.find((course) => course._id === courseId);
     const { pathname } = useLocation();
     const pageName = pathname.substring(pathname.lastIndexOf("/") + 1);
+
+    const [course, setCourse] = useState({});
+
+    const findCourseById = async (courseId) => {
+        const response = await axios.get(
+            `${URL}/${courseId}`
+        );
+        setCourse(response.data);
+    };
+    useEffect(() => {
+        findCourseById(courseId);
+    }, [courseId]);
 
     if (!course) {
         // Handle the case where courseId is not found in the courses data
@@ -26,15 +43,19 @@ function Courses({ courses }) {
         <div className="course-navigation-div">
             <nav aria-label="breadcrumb custom-breadcrumb">
                 <ol className="breadcrumb">
-                    <li className="breadcrumb-item text-danger"><FaBars /> {course._id}</li>
-                    <li className="breadcrumb-item text-danger">{course.name}</li>
+                    {course && (
+                        <li className="breadcrumb-item text-danger">
+                            <FaBars /> {course.number}
+                        </li>
+                    )}
+                    <li className="breadcrumb-item text-danger">{course ? course.name : ""}</li>
                     <li className="breadcrumb-item active" aria-current="page">{pageName}</li>
                 </ol>
             </nav>
 
             <hr />
             <div className="d-none d-md-block">
-            <CourseNavigation />
+                <CourseNavigation />
             </div>
             <div>
                 <div
@@ -47,7 +68,7 @@ function Courses({ courses }) {
                         <Route path="Assignments" element={<Assignments />} />
                         <Route
                             path="Assignments/:assignmentId"
-                            element={<AssignmentEditor/>    }
+                            element={<AssignmentEditor />}
                         />
                         <Route path="Grades" element={<Grades />} />
                     </Routes>
