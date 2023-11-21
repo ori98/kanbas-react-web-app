@@ -24,7 +24,7 @@ function Kanbas() {
   });
 
   // accessing courses from database
-  const URL = "http://localhost:4000/api/courses";
+  const URL = "https://kanbas-node-server-app-87u1.onrender.com/api/courses";
   const findAllCourses = async () => {
     const response = await axios.get(URL);
     setCourses(response.data);

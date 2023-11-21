@@ -15,7 +15,7 @@ import "./index.css";
 
 // function Courses({ courses }) {
 function Courses() {
-    const URL = "http://localhost:4000/api/courses";
+    const URL = "https://kanbas-node-server-app-87u1.onrender.com/api/courses";
 
     const { courseId } = useParams();
     // const course = courses.find((course) => course._id === courseId);

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const ASSIGNMENT_URL = "http://localhost:4000/api/assignments";
+const ASSIGNMENT_URL = "https://kanbas-node-server-app-87u1.onrender.com/api/assignments";
 
 // retrieving assignments
 export const findAssignmentForCourse = async (courseId) => {
